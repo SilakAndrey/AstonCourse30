@@ -3,12 +3,20 @@ package org.example;
 public class LessonOne {
 
     public static void main(String[] args) {
-        //printThreeWords();
-        //checkSumSign();
-        //printColor();
-        //compareNumbers();
-        //System.out.println(task5(10, 10)+ "\n");
-        task6(1);
+        printThreeWords();
+        checkSumSign();
+        printColor();
+        compareNumbers();
+        System.out.println(task5(10, 10) + "\n");
+        task6(-2);
+        System.out.println(task7(10) + "\n");
+        task8("Не ставьте 59 баллов ", 5);
+        System.out.println("\n\n" + task9(1900) + "\n");
+        task10();
+        //task11();
+        //task12();
+        //task13();
+        //task14();
     }
 
     public static void printThreeWords(){
@@ -55,8 +63,50 @@ public class LessonOne {
     public static boolean task6(int a) {
         if (a >= 0) {
             System.out.println("Число положительное\n");
+            return true;
         }
         else {System.out.println("Число отрицательное\n");
+            return false;
         }
     }
+
+    public static boolean task7(int a) {
+        if (a >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static void task8(String text, int a){
+        for (int i = a; i > 0; i--){
+            System.out.print(text);
+        }
+    }
+
+    public static boolean task9(int a) {
+        if (a % 400 == 0) {
+            return true;
+        }
+        if (a % 100 == 0) {
+            return false;
+        }
+        if (a % 4 == 0) {
+            return true;
+        }
+        else return false;
+    }
+
+     public static void task10(){
+        int[] a = new int[5];
+        a[0] = 1; a[1] = 0; a[2] = 1; a[3] = 0; a[4] = 1;
+        for (int i = 0; i < 5; i++){
+            if(a[i] == 1){
+                a[i] = 0;
+            }
+            else {a[i] = 1;
+            }
+        }
+     }
+
+
 }
